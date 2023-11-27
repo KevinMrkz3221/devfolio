@@ -29,7 +29,8 @@ ALLOWED_HOSTS = [
     'kevinarm.me',
     'www.kevinarm.me',
     '127.0.0.1',
-    'localhost'
+    'localhost',
+    'kevinarmportfolio-c1d3ab3aada9.herokuapp.com'
 ]
 
 
