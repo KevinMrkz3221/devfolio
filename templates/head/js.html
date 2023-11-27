@@ -1,0 +1,32 @@
+{% load static %}
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- AOS Library JS -->
+<script src="{% static 'js/aos.js' %}"></script>
+
+<script>
+    document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.style.display === 'block') {
+            navbarCollapse.style.display = 'none';
+        } else {
+            navbarCollapse.style.display = 'block';
+        }
+    });
+</script>
+
+
+
+<script>
+    AOS.init({
+        duration: 800,  // Duración de la animación en milisegundos
+        easing: 'ease-in-out', // Tipo de animación
+        once: true,  // Solo realiza la animación una vez
+    });
+</script>
