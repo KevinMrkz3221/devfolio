@@ -39,10 +39,9 @@ class HomeView(TemplateView):
     
 
 def enviar_correo(context, me=1):
-    subject = context.subject
+    subject = 'Thank You for Your Message'
     if me == 0:
         message = f'''
-            Subject: Thank You for Your Message
 
             Dear {context.name},
 
