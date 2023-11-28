@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_recaptcha',
     'home',
 ]
 
@@ -143,3 +144,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'kevinandresrosalesmarquez@gmail.com'
 EMAIL_HOST_PASSWORD = 'haor jyym tinb xkyf '
 
+RECAPTCHA_PUBLIC_KEY = '6Ld38x4pAAAAAPhMei7TOkfKKrtwQzv_7J4KIAbW'
+RECAPTCHA_PRIVATE_KEY = '6Ld38x4pAAAAAJQkc9mgZAmw2M9awUWpwK0qmKpD'

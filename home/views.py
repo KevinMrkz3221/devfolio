@@ -5,6 +5,9 @@ from django.core.mail import send_mail
 
 from .models import Skill, Project, Experience, Contact
 from django.conf import settings
+
+from . import forms
+
 # Create your views here.
 
 
@@ -35,9 +38,9 @@ class HomeView(TemplateView):
             subject=subject,
             message=message
         )
-        contact.save()
-        enviar_correo(contact,me=0)
-        enviar_correo(contact)
+        # contact.save()
+        # enviar_correo(contact,me=0)
+        # enviar_correo(contact)
 
         return render(request, 'home/send_email.html', {'name': contact.name})
     
