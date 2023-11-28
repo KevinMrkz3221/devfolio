@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 from .models import Skill, Project, Experience, Contact
 from django.conf import settings
 
-from . import forms
+from .forms import ContactForm
 
 # Create your views here.
 
@@ -21,28 +21,21 @@ class HomeView(TemplateView):
         context['skills'] = Skill.objects.all()
         context['projects'] = Project.objects.all()
         context['experiences'] = Experience.objects.all()
-
+        context['form'] = ContactForm()
         return context
     
     def post(self, request, *args, **kwargs):
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
-
-        contact = Contact.objects.create(
-            name=name,
-            email=email,
-            phone=phone,
-            subject=subject,
-            message=message
-        )
-        # contact.save()
-        # enviar_correo(contact,me=0)
-        # enviar_correo(contact)
-
-        return render(request, 'home/send_email.html', {'name': contact.name})
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                contact = form.save()
+                enviar_correo(contact,me=0)
+                enviar_correo(contact)
+                return render(request, 'home/send_email.html', {'name': contact.name})
+            else:
+                return render(request, 'home/home.html', {'form': form })
+        else:    
+            return render(request, 'home/home.html', {'form': form})
     
 
 def enviar_correo(context, me=1):
