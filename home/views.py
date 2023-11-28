@@ -18,3 +18,4 @@ class HomeView(TemplateView):
         context['experiences'] = Experience.objects.all()
 
         return context
+    
