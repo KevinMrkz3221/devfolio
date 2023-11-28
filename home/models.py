@@ -5,6 +5,7 @@ from django.db import models
 class Skill(models.Model):
     name = models.CharField(max_length=100)
     level = models.IntegerField()
+    level_char = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
         ordering = ['-level']
@@ -19,13 +20,23 @@ class Project(models.Model):
     image = models.ImageField(upload_to='static/projects', blank=True, null=True)
     url = models.URLField(blank=True)
     created_at = models.DateField(auto_now_add=True)
-
+    url_git = models.URLField(blank=True, null=True)
     class Meta:
         ordering = ['-created_at']
     
     def __str__(self):
         return self.name
+
+class ProjectImage(models.Model):
+    project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='static/projects', blank=True, null=True)
+
+    class Meta:
+        ordering = ['id']
     
+    def __str__(self):
+        return self.project.name    
+
 class Experience(models.Model):
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)

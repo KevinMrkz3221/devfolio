@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.core.mail import send_mail
 
-from .models import Skill, Project, Experience, Contact
+from .models import Skill, Project, Experience, ProjectImage
 from django.conf import settings
 
 from .forms import ContactForm
@@ -21,7 +21,9 @@ class HomeView(TemplateView):
         context['skills'] = Skill.objects.all()
         context['projects'] = Project.objects.all()
         context['experiences'] = Experience.objects.all()
+        context['project_images'] = ProjectImage.objects.all()
         context['form'] = ContactForm()
+
         return context
     
     def post(self, request, *args, **kwargs):
@@ -67,7 +69,6 @@ def enviar_correo(context, me=1):
     from_email = settings.EMAIL_HOST_USER
 
     send_mail(subject, message, from_email, recipient_list)
-    # Puedes redirigir o renderizar una respuesta según tus necesidades
 
 
 
