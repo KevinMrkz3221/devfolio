@@ -68,7 +68,7 @@ def enviar_correo(context, me=1):
             Email: {context.email}
             Phone: {context.phone}
         '''
-        recipient_list = ['kevinarm@proton.me', 'kevin.rosales98@hotmail.com', 'kevinarm9812@gmail.com', 'kevin.rosales@mpobyte.com']
+        recipient_list = ['kevinarm@proton.me', 'kevin.rosales98@hotmail.com', 'kevinarm9812@gmail.com', 'kevin.rosales@mpobyte.com', 'raul.sandoval@expeditors.com']
     from_email = settings.EMAIL_HOST_USER
 
     send_mail(subject, message, from_email, recipient_list)
