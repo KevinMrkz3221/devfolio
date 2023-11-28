@@ -8,6 +8,7 @@ django = "*"
 pillow = "*"
 boto3 = "*"
 django-storages = "*"
+django-recaptcha = "*"
 
 [dev-packages]
 

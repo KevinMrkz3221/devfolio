@@ -142,3 +142,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'kevinandresrosalesmarquez@gmail.com'
 EMAIL_HOST_PASSWORD = 'haor jyym tinb xkyf '
+

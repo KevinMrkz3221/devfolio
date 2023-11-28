@@ -30,3 +30,13 @@
         once: true,  // Solo realiza la animación una vez
     });
 </script>
+
+<!-- Replace the variables below. -->
+<script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6Lc-sh4pAAAAALIv3Hk_RFqvxyFe0-3cfK97z8nU', {action: 'HOMEPAGE'});
+      });
+    }
+  </script>
