@@ -18,7 +18,7 @@ class Project(models.Model):
     short_description = models.TextField()
     description = models.TextField()
     image = models.ImageField(upload_to='static/projects', blank=True, null=True)
-    url = models.URLField(blank=True)
+    url = models.URLField(blank=True, null=True)
     created_at = models.DateField(auto_now_add=True)
     url_git = models.URLField(blank=True, null=True)
     class Meta:
