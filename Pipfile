@@ -9,6 +9,8 @@ pillow = "*"
 boto3 = "*"
 django-storages = "*"
 django-recaptcha = "*"
+python-dotenv = "*"
+python-decouple = "*"
 
 [dev-packages]
 

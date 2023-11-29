@@ -267,6 +267,15 @@ Kevin's Portfolio
             <form method="POST" id="contact-form">
                 {% csrf_token %}
                 {{ form.as_p }}
+                
+
+                {% for field in form %}
+                        {% for error in field.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            <strong>'{{ field.label }}' {{ error|escape }}</strong>
+                        </div>  
+                        {% endfor %}
+                {% endfor %}
 
                 <button type="submit" class="btn bg-secondary text-white my-5">Contact Me</button>
             </form>
@@ -355,7 +364,8 @@ Kevin's Portfolio
                 {% if project.url_git %}
                 <a href="{{ project.url_git }}" class="btn btn-outline-secondary"> Git URL </a>
                 {% endif %}
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
             </div>
         </div>
     </div>

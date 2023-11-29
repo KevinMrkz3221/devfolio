@@ -1,12 +1,17 @@
-AWS_ACCESS_KEY_ID = 'DO00EF7DY8L67W29HCQ4'
-AWS_SECRET_ACCESS_KEY ='FXIh/XA2y/HD7xxwoio30FR08iwkJvZvgx8sMwvKa60'
-AWS_STORAGE_BUCKET_NAME = 'kevinarmport'
-AWS_S3_ENDPOINT_URL ='https://nyc3.digitaloceanspaces.com'
+import os
+from dotenv import load_dotenv 
+load_dotenv()
+
+
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_ENDPOINT_URL = os.getenv('AWS_S3_ENDPOINT_URL')
 
 AWS_S3_OBJECTS_PARAMETERS = {
     "CacheControl": "max-age=86400"
 }
-AWS_LOCATION = 'https://kevinarmport.nyc3.digitaloceanspaces.com'
+AWS_LOCATION = os.getenv('AWS_LOCATION')
 
 
 DEFAULT_FILE_STORAGE = "config.cdn.backends.MediaRootS3Boto3Storage"
