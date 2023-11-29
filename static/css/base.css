@@ -1,0 +1,80 @@
+.custom-bg-color {
+    background-color: #17a2b8;
+    /* Tu color personalizado */
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggler.collapsed .navbar-collapse {
+        display: block;
+    }
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    width: 2px;
+    background-color: #17a2b8;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+    background-color: #17a2b8;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-item .timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-item .timeline-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.timeline-item .timeline-date {
+    font-size: 14px;
+    color: #6c757d;
+}

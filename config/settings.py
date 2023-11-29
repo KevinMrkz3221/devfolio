@@ -125,6 +125,35 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Content Security Policy
+# CSP_DEFAULT_SRC = ("'self'", "https://nyc3.digitaloceanspaces.com", "https://www.google.com/recaptcha/", "https://www.gstatic.com/recaptcha/", "https://www.google.com")
+# CSP_IMG_SRC = ("'self'", "https://nyc3.digitaloceanspaces.com", "https://www.google.com", "https://www.gstatic.com/recaptcha/", "https://www.google.com/recaptcha/")
+# CSP_STYLE_SRC = ("'self'", "https://nyc3.digitaloceanspaces.com", "https://www.google.com/recaptcha/", "https://www.gstatic.com/recaptcha/")
+# CSP_SCRIPT_SRC = ("'self'", "https://nyc3.digitaloceanspaces.com", "https://www.google.com/recaptcha/", "https://www.gstatic.com/recaptcha/")
+# CSP_FONT_SRC = ("'self'", "https://nyc3.digitaloceanspaces.com", "https://www.google.com/recaptcha/", "https://www.gstatic.com/recaptcha/")
+# CSP_INCLUDE_NONCE_IN = ['script-src']
+# CSP_REPORT_URI = '/csp-report/'
+# CSP_REPORT_ONLY = False
+# CSP_REPORTS_LOG = True
+# CSP_REPORTS_LOG_LEVEL = 'warning'
+# CSP_REPORTS_EMAIL_ADMINS = False
+# CSP_REPORTS_EMAIL_ADMINS_FROM = 'CSP Reports <  >'
+# CSP_REPORTS_EMAIL_ADMINS_TO = ['']
+# CSP_REPORTS_EMAIL_ADMINS_SUBJECT = 'CSP Report'
+# CSP_REPORTS_EMAIL_ADMINS_TEMPLATE = 'csp/email.html'
+# CSP_REPORTS_EMAIL_ADMINS_HTML = True
+# CSP_REPORTS_EMAIL_ADMINS_PLAIN = False
+# CSP_REPORTS_SAVE = False
+# CSP_REPORTS_LOG = True
+# CSP_REPORTS_LOG_LEVEL = 'warning'
+# CSP_REPORTS_LOG_FILENAME = 'csp-reports.log'
+# CSP_REPORTS_LOG_MAXSIZE = 100 * 1024 * 1024
+# CSP_REPORTS_LOG_BACKUPS = 10
+# CSP_REPORTS_LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
+# CSP_REPORTS_LOG_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+# CSP_REPORTS_LOG_INTERVAL = 60 * 60
+# CSP_REPORTS_LOG_BACKUP_COUNT = 10
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

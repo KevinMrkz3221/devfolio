@@ -11,6 +11,7 @@ django-storages = "*"
 django-recaptcha = "*"
 python-dotenv = "*"
 python-decouple = "*"
+django-csp = "*"
 
 [dev-packages]
 
