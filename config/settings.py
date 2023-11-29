@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DJANGO_DEBUG')
 if DEBUG is False:
     SECURE_SSL_REDIRECT = True
 ALLOWED_HOSTS = [
