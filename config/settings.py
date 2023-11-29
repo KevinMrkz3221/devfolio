@@ -26,8 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
+if DEBUG is False:
+    SECURE_SSL_REDIRECT = True
 ALLOWED_HOSTS = [
     'kevinarm.me',
     'www.kevinarm.me',
@@ -150,5 +151,3 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 RECAPTCHA_PUBLIC_KEY = os.getenv('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.getenv('RECAPTCHA_PRIVATE_KEY')
 
-if DEBUG is False:
-    SECURE_SSL_REDIRECT = True
