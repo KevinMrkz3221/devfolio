@@ -12,6 +12,7 @@ django-recaptcha = "*"
 python-dotenv = "*"
 python-decouple = "*"
 django-csp = "*"
+mysqlclient = "*"
 
 [dev-packages]
 

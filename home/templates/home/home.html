@@ -315,7 +315,7 @@ Kevin's Portfolio
             <div class="modal-body">
                 <!-- Aqui va carrusel-->
                 <div class="container row">
-                    <div id="carouselExample" class="carousel slide text-center" data-ride="carousel">
+                    <div id="project{{project.id}}" class="carousel slide text-center" data-ride="carousel">
                         <div class="carousel-inner">
 
                             <div class="carousel-item active">
@@ -333,12 +333,12 @@ Kevin's Portfolio
 
                             <!-- Agrega más items según sea necesario -->
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExample" role="button"
+                        <a class="carousel-control-prev" href="#project{{project.id}}" role="button"
                             data-slide="prev">
                             <span class="carousel-control-prev-icon  btn bg-dark" aria-hidden="true"></span>
 
                         </a>
-                        <a class="carousel-control-next" href="#carouselExample" role="button"
+                        <a class="carousel-control-next" href="#project{{project.id}}" role="button"
                             data-slide="next">
                             <span class="carousel-control-next-icon  btn bg-dark" aria-hidden="true"></span>
 
