@@ -13,6 +13,7 @@ python-dotenv = "*"
 python-decouple = "*"
 django-csp = "*"
 mysqlclient = "*"
+whitenoise = "*"
 
 [dev-packages]
 

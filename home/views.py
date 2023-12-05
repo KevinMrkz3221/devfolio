@@ -41,8 +41,8 @@ class HomeView(TemplateView):
     
 
 def enviar_correo(context, me=1):
-    subject = 'Thank You for Your Message'
     if me == 0:
+        subject = 'Thank You for Your Message'
         message = f'''
 
             Dear {context.name},
@@ -58,6 +58,7 @@ def enviar_correo(context, me=1):
         '''
         recipient_list = [context.email,]
     else:
+        subject = context.subject
         message = context.message
         message += f'''
             \n\n
@@ -65,7 +66,7 @@ def enviar_correo(context, me=1):
             Email: {context.email}
             Phone: {context.phone}
         '''
-        recipient_list = ['kevinarm@proton.me', 'kevin.rosales98@hotmail.com', 'kevinarm9812@gmail.com', 'kevin.rosales@mpobyte.com']
+        recipient_list = ['kevinarm@proton.me', 'kevin.rosales98@hotmail.com', 'kevinarm9812@gmail.com']
     from_email = settings.EMAIL_HOST_USER
 
     send_mail(subject, message, from_email, recipient_list)
