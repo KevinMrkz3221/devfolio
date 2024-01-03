@@ -59,3 +59,18 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class ExtraKnowledge(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    url = models.URLField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    image = models.ImageField(upload_to='static/extra_knowledge', blank=True, null=True)
+    pdf = models.FileField(upload_to='static/extra_knowledge', blank=True, null=True)
+
+    class Meta:
+        ordering = ['-date']
+        
+    def __str__(self):
+        return self.name
